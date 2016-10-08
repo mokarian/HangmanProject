@@ -1,3 +1,8 @@
+Requirements
+=====================
+* Java 1.8
+* Maven 3.1.1+
+
 Hangman Project:
 =====================
 * Hangman is a two player game. One player thinks of a word (Word Chooser) and the other (Word guesser) tries to guess it by suggesting letters or numbers, within a certain number of guesses depending on the length of the word. The word to guess is represented by a row of dashes, representing each letter of the word. If the Word Guesser suggests a letter which occurs in the word, the other player writes it in its correct positions. If the suggested letter or number does not occur in the word, the number of remaining guesses will be deducted.
