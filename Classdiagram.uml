@@ -3,96 +3,109 @@
   <ID>JAVA</ID>
   <OriginalElement>Player.Chooser</OriginalElement>
   <nodes>
-    <node x="-17.475535168195734" y="641.7186544342508">Screen</node>
-    <node x="190.0" y="225.0">Support.GameDifficulty</node>
-    <node x="524.2744648318042" y="375.4266055045872">Player.Player</node>
-    <node x="-142.90519877675837" y="645.5764525993884">Reader</node>
-    <node x="245.61314984709497" y="407.6788990825688">Controller</node>
-    <node x="140.5" y="0.0">java.io.Serializable</node>
-    <node x="-216.03669724770646" y="408.8608562691131">Game</node>
-    <node x="171.0" y="79.0">java.lang.Enum</node>
-    <node x="339.0" y="247.0">Player.PlayerState</node>
-    <node x="0.0" y="236.0">Support.GameState</node>
-    <node x="579.4510703363915" y="534.2935779816513">Player.Guesser</node>
-    <node x="263.5" y="0.0">java.lang.Comparable</node>
-    <node x="425.16360856269114" y="531.7217125382263">Player.Chooser</node>
+    <node x="526.7089743589744" y="489.0">Screen</node>
+    <node x="866.7089743589744" y="522.0">Support.GameDifficulty</node>
+    <node x="153.2089743589744" y="821.0">Player.Player</node>
+    <node x="1015.7089743589745" y="555.0">Reader</node>
+    <node x="610.0782051282051" y="1121.5">Controller</node>
+    <node x="316.15" y="11.0">java.io.Serializable</node>
+    <node x="546.3282051282051" y="722.0">Game</node>
+    <node x="249.64999999999998" y="101.0">java.lang.Enum</node>
+    <node x="204.7089743589744" y="544.0">Player.PlayerState</node>
+    <node x="336.7089743589744" y="533.0">Support.GameState</node>
+    <node x="0.0" y="1099.5">Player.Guesser</node>
+    <node x="439.15" y="0.0">java.lang.Comparable</node>
+    <node x="188.0" y="1088.0">Player.Chooser</node>
   </nodes>
   <notes />
   <edges>
     <edge source="Game" target="Support.GameState">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="-151.20000000000005" y="-158.0" />
+      <point x="584.1282051282051" y="702.0" />
+      <point x="421.7089743589744" y="702.0" />
+      <point x="0.0" y="47.5" />
     </edge>
     <edge source="Player.Guesser" target="Player.Player">
-      <point x="0.0" y="-25.5" />
-      <point x="621.2262996941897" y="484.8608562691131" />
-      <point x="614.8058103975534" y="472.00152905198786" />
-      <point x="38.75" y="25.5" />
+      <point x="0.0" y="-47.5" />
+      <point x="84.0" y="1063.0" />
+      <point x="189.0423076923077" y="1063.0" />
+      <point x="-71.66666666666667" y="59.0" />
     </edge>
     <edge source="Player.PlayerState" target="java.lang.Enum">
       <point x="0.0" y="-36.5" />
-      <point x="395.0" y="200.0" />
-      <point x="310.1666666666667" y="200.0" />
-      <point x="55.66666666666666" y="48.0" />
+      <point x="260.7089743589744" y="464.0" />
+      <point x="314.15" y="464.0" />
+      <point x="-129.0" y="169.0" />
     </edge>
     <edge source="java.lang.Enum" target="java.lang.Comparable">
-      <point x="41.75" y="-48.0" />
-      <point x="296.25" y="54.0" />
-      <point x="317.0" y="54.0" />
-      <point x="0.0" y="14.5" />
+      <point x="96.75" y="-169.0" />
+      <point x="539.9" y="76.0" />
+      <point x="518.65" y="76.0" />
+      <point x="0.0" y="25.5" />
     </edge>
     <edge source="Controller" target="Game">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="41.75" y="-25.5" />
+      <point x="0.0" y="158.0" />
     </edge>
     <edge source="Game" target="Reader">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="151.20000000000005" y="-158.0" />
+      <point x="886.5282051282052" y="702.0" />
+      <point x="1080.7089743589745" y="702.0" />
+      <point x="0.0" y="25.5" />
     </edge>
     <edge source="Controller" target="Player.Player">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="-41.75" y="-25.5" />
+      <point x="651.8282051282051" y="1063.0" />
+      <point x="332.3756410256411" y="1063.0" />
+      <point x="71.66666666666669" y="59.0" />
     </edge>
     <edge source="Player.Chooser" target="Player.Player">
-      <point x="0.0" y="-25.5" />
-      <point x="519.3119266055046" y="495.14831804281346" />
-      <point x="534.7339449541284" y="472.00152905198775" />
-      <point x="-38.75" y="25.5" />
+      <point x="0.0" y="-59.0" />
+      <point x="280.0" y="1063.0" />
+      <point x="260.7089743589744" y="1063.0" />
+      <point x="0.0" y="59.0" />
     </edge>
     <edge source="java.lang.Enum" target="java.io.Serializable">
-      <point x="-41.75" y="-48.0" />
-      <point x="212.75" y="54.0" />
-      <point x="192.0" y="54.0" />
+      <point x="-96.75" y="-169.0" />
+      <point x="346.4" y="76.0" />
+      <point x="367.65" y="76.0" />
       <point x="0.0" y="14.5" />
     </edge>
     <edge source="Game" target="Support.GameDifficulty">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="75.60000000000002" y="-158.0" />
+      <point x="810.9282051282051" y="692.0" />
+      <point x="931.2089743589744" y="692.0" />
+      <point x="0.0" y="58.5" />
     </edge>
     <edge source="Support.GameState" target="java.lang.Enum">
       <point x="0.0" y="-47.5" />
-      <point x="85.0" y="200.0" />
-      <point x="198.83333333333334" y="200.0" />
-      <point x="-55.666666666666664" y="48.0" />
+      <point x="421.7089743589744" y="464.0" />
+      <point x="443.15" y="464.0" />
+      <point x="0.0" y="169.0" />
     </edge>
     <edge source="Game" target="Screen">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="-75.60000000000002" y="-158.0" />
+      <point x="659.7282051282051" y="702.0" />
+      <point x="606.7089743589744" y="702.0" />
+      <point x="-80.0" y="91.5" />
     </edge>
     <edge source="Player.Player" target="Player.PlayerState">
-      <point x="0.0" y="0.0" />
-      <point x="0.0" y="0.0" />
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="36.5" />
     </edge>
     <edge source="Support.GameDifficulty" target="java.lang.Enum">
       <point x="0.0" y="-58.5" />
-      <point x="0.0" y="48.0" />
+      <point x="931.2089743589744" y="464.0" />
+      <point x="572.15" y="464.0" />
+      <point x="129.0" y="169.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7776456599286563" x="102.40519877675843" y="350.50000000000006" />
+  <settings layout="Hierarchic Group" zoom="0.7776456599286563" x="724.4051987767584" y="-9.499999999999943" />
   <SelectedNodes />
   <Categories>
-    <Category>Properties</Category>
     <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
