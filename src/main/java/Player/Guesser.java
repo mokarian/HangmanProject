@@ -4,7 +4,6 @@ import Support.GameDifficulty;
 
 
 public class Guesser extends Player {
-    private static String NOT_VALID = "not_valid";
 
     public void guess() {
         //TODO guess
