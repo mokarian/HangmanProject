@@ -1,6 +1,8 @@
 package Player;
 
 
+import java.util.Scanner;
+
 public class Chooser extends Player {
     private String word;
 
@@ -18,5 +20,13 @@ public class Chooser extends Player {
     public void setWord(final String word) {
         this.word = word;
     }
+
+
+    public String scan() {
+
+        final Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
 
 }

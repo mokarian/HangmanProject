@@ -4,6 +4,7 @@ import Support.GameDifficulty;
 
 
 public class Guesser extends Player {
+    private static String NOT_VALID = "not_valid";
 
     public void guess() {
         //TODO guess
@@ -17,7 +18,7 @@ public class Guesser extends Player {
             System.out.println("Normal");
             System.out.println("Hard");
             final String difficulty = this.scan();
-            if (GameDifficulty.NOTVALID != (difficulty_return = isValidDifficultyType(difficulty))) {
+            if ((difficulty_return = isValidDifficultyType(difficulty))!=null) {
                 return difficulty_return;
             } else {
                 System.out.println("The prompted game difficulty is not valid, try again");
@@ -36,7 +37,7 @@ public class Guesser extends Player {
         if (difficulty.equalsIgnoreCase(GameDifficulty.HARD.name())) {
             return GameDifficulty.HARD;
         } else {
-            return GameDifficulty.NOTVALID;
+            return null;
         }
     }
 

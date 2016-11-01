@@ -2,5 +2,5 @@ package Support;
 
 
 public enum GameDifficulty {
-    EASY, HARD, NORMAL, NOTVALID
+    EASY, HARD, NORMAL
 }
