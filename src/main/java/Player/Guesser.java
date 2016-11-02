@@ -5,6 +5,10 @@ import Support.GameDifficulty;
 
 public class Guesser extends Player {
 
+    public Guesser() {
+        this.setState(PlayerState.PLAYING);
+    }
+
     public void guess() {
         //TODO guess
     }

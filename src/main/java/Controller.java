@@ -1,6 +1,8 @@
 import Player.Chooser;
 import Player.Guesser;
+import Player.PlayerState;
 import Support.GameDifficulty;
+import Support.GameState;
 
 
 public class Controller {
@@ -12,6 +14,8 @@ public class Controller {
         final GameDifficulty difficulty = guesser.getDifficulty();
         final Game game = new Game(difficulty, chooser);
         game.StartGame();
+        guesser.setState(PlayerState.NOT_PLAYING);
+        chooser.setState(PlayerState.NOT_PLAYING);
     }
 
 
