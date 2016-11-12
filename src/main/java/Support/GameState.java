@@ -2,5 +2,5 @@ package Support;
 
 
 public enum GameState {
-    NOT_STARTED, IN_PROGRESS, FINISHED
+    NOT_STARTED, SET_DIFFICULTY, IN_PROGRESS, FINISHED
 }

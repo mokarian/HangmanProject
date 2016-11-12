@@ -10,18 +10,21 @@ public class Game {
     public char[] blanks;
     private GameState gameState;
     private int guesses;
+    private Reader reader;
 
     public Game(final GameDifficulty gameDifficulty, final Chooser chooser) {
-        this.setGameState(GameState.NOT_STARTED);
+        this.gameState = GameState.NOT_STARTED;
         this.gameDifficulty = gameDifficulty;
         this.blanks = new char[chooser.getWord().length()];
         this.word = chooser.getWord();
         this.wordArr = chooser.getWord().toCharArray();
         this.guesses = (int) (chooser.getWord().length() * getDifficultyFactor(gameDifficulty));
         this.screen = new Screen();
+        this.reader = new Reader();
     }
 
     private double getDifficultyFactor(final GameDifficulty gameDifficulty) {
+        gameState = GameState.SET_DIFFICULTY;
         if (gameDifficulty == GameDifficulty.EASY) {
             return 2;
         } else if (gameDifficulty == GameDifficulty.NORMAL) {
@@ -33,13 +36,12 @@ public class Game {
         }
     }
 
-    public void StartGame() {
+    public boolean StartGame() {
         this.setGameState(GameState.IN_PROGRESS);
-        Start();
+        return Start();
     }
 
     public void endGame() {
-        //TODO EndGAme
         this.setGameState(GameState.FINISHED);
     }
 
@@ -53,12 +55,11 @@ public class Game {
         }
     }
 
-    public void Start() {
-        final Reader reader = new Reader();
+    public boolean Start() {
         newGame();
         do {
             screen.showBlanks(blanks);
-            final String letterGuessed = reader.scan();
+            final String letterGuessed = reader.getNextCharacter();
             final char letterGuess = letterGuessed.charAt(0);
             if (letterGuessed.length() > 1) {
                 screen.oneLetterWarning();
@@ -80,14 +81,17 @@ public class Game {
             guesses--;
             screen.guessesRemaining(guesses);
         } while (guesses > 0 && (new String(blanks).contains("_")));
-
+        boolean guesserWon;
         if (guesses >= 0 && !(new String(blanks).contains("_"))) {
             screen.youGuessedIt(blanks);
+            guesserWon=true;
             endGame();
         } else {
             screen.youLost();
+            guesserWon=false;
             endGame();
         }
+        return guesserWon;
     }
 
 

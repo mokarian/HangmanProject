@@ -5,8 +5,17 @@ import Support.GameDifficulty;
 
 public class Guesser extends Player {
 
+    GuesserState state;
+
+    public void checkResult(boolean isWon) {
+        if(isWon)
+            state = GuesserState.WON;
+        else
+            state = GuesserState.LOST;
+    }
+
     public Guesser() {
-        this.setState(PlayerState.PLAYING);
+        this.state= GuesserState.IDLE;
     }
 
     public void guess() {
@@ -14,14 +23,16 @@ public class Guesser extends Player {
     }
 
     public GameDifficulty getDifficulty() {
+        this.state = GuesserState.SELECT_DIFFICULTY;
         while (true) {
             GameDifficulty difficulty_return = null;
             System.out.println("Please choose game difficulty:");
             System.out.println("Easy");
             System.out.println("Normal");
             System.out.println("Hard");
-            final String difficulty = this.scan();
+            final String difficulty = this.chooseWord();
             if ((difficulty_return = isValidDifficultyType(difficulty))!=null) {
+                state = GuesserState.PLAYING;
                 return difficulty_return;
             } else {
                 System.out.println("The prompted game difficulty is not valid, try again");
@@ -43,6 +54,5 @@ public class Guesser extends Player {
             return null;
         }
     }
-
 
 }

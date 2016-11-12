@@ -5,16 +5,25 @@ import java.util.Scanner;
 
 public class Chooser extends Player {
     private String word;
+    private ChooserState state;
 
     public Chooser() {
-        this.setState( PlayerState.PLAYING);
+        startGame();
     }
 
     public void choose() {
+        this.state = ChooserState.CHOOSING;
         System.out.println("Hello Chooser");
         System.out.println("Please choose a word:");
-        setWord(this.scan());
+        setWord(this.chooseWord());
+    }
 
+    private void startGame() {
+        this.state = ChooserState.PLAYING;
+    }
+
+    public void endGame() {
+        this.state = ChooserState.NOT_PLAYING;
     }
 
     public String getWord() {
@@ -26,7 +35,7 @@ public class Chooser extends Player {
     }
 
 
-    public String scan() {
+    public String chooseWord() {
 
         final Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
