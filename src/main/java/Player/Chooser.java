@@ -1,6 +1,7 @@
 package Player;
 
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Chooser extends Player {
@@ -13,9 +14,13 @@ public class Chooser extends Player {
 
     public void choose() {
         this.state = ChooserState.CHOOSING;
-        System.out.println("Hello Chooser");
-        System.out.println("Please choose a word:");
-        setWord(this.chooseWord());
+        final String passwd;
+        final String message = "Hello Chooser\n Please choose a word:";
+        if (System.console() == null) {
+            final JPasswordField pf = new JPasswordField();
+            passwd = JOptionPane.showConfirmDialog(null, pf, message, JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION ? new String(pf.getPassword()) : "";
+        } else passwd = new String(System.console().readPassword("%s> ", message));
+        setWord(passwd);
     }
 
     private void startGame() {
