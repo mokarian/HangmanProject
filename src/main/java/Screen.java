@@ -21,6 +21,11 @@ public class Screen {
         System.out.println((showBlanksFromArray(blanks)));
     }
 
+    public void youGuessedIt() {
+        System.out.println("You Guessed it!!");
+    }
+
+
     private String showBlanksFromArray(final char[] blanks) {
         return Arrays.toString(blanks);
     }
@@ -41,9 +46,7 @@ public class Screen {
         System.out.println("the entered letter is WRONG! ");
     }
     public void hangman(){
-        System.out.println("▒█░▒█ ░█▀▀█ ▒█▄░▒█ ▒█▀▀█ ▒█▀▄▀█ ░█▀▀█ ▒█▄░▒█ \n" +
-                "▒█▀▀█ ▒█▄▄█ ▒█▒█▒█ ▒█░▄▄ ▒█▒█▒█ ▒█▄▄█ ▒█▒█▒█ \n" +
-                "▒█░▒█ ▒█░▒█ ▒█░░▀█ ▒█▄▄█ ▒█░░▒█ ▒█░▒█ ▒█░░▀█ ");
+        System.out.println("---------  :WELCOME TO HANGMAN GAME:  ---------");
 
     }
 }

@@ -14,7 +14,6 @@ public class Controller {
         final Chooser  chooser = new Chooser();
         new Screen().hangman();
         chooser.choose();
-        Runtime.getRuntime().exec("clear");
         final GameDifficulty difficulty = guesser.getDifficulty();
         final Game game = new Game(difficulty, chooser);
         boolean guesserWon = game.StartGame();

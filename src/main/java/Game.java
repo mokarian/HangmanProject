@@ -57,9 +57,16 @@ public class Game {
 
     public boolean Start() {
         newGame();
+        boolean guesserWon;
         do {
             screen.showBlanks(blanks);
             final String letterGuessed = reader.getNextCharacter();
+            if(letterGuessed.length()>1 && letterGuessed.equalsIgnoreCase(word)){
+                screen.guessesRemaining(guesses);
+                screen.youGuessedIt();
+                endGame();
+                return true;
+            }
             final char letterGuess = letterGuessed.charAt(0);
             if (letterGuessed.length() > 1) {
                 screen.oneLetterWarning();
@@ -81,7 +88,7 @@ public class Game {
             guesses--;
             screen.guessesRemaining(guesses);
         } while (guesses > 0 && (new String(blanks).contains("_")));
-        boolean guesserWon;
+
         if (guesses >= 0 && !(new String(blanks).contains("_"))) {
             screen.youGuessedIt(blanks);
             guesserWon=true;
